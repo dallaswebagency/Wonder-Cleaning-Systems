@@ -79,14 +79,14 @@ nav.main a:hover::after,nav.main a.on::after{width:100%}
 .hero-stage{position:relative;margin-top:3rem;display:grid;grid-template-columns:minmax(0,1fr) 420px;align-items:stretch}
 .hero-photo{position:relative;min-height:520px;--cut:44px}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,17,80,.35),transparent 55%)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,17,80,.25),transparent 40%)}
 .hero-card{background:var(--ink);color:#fff;padding:2.6rem 2.4rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.8rem;position:relative}
 .hero-card::before{content:"";position:absolute;left:0;top:0;width:100%;height:6px;background:repeating-linear-gradient(90deg,var(--brick) 0 40px,transparent 40px 48px)}
 .hero-card h2{font-size:1.45rem;font-weight:800;line-height:1.2;font-variation-settings:"wdth" 90}
 .hero-card p{color:#C9CDEA;font-size:1rem}
 .hero-card .btns{display:flex;flex-direction:column;gap:.7rem}
 .hero-card .btns .btn{justify-content:space-between}
-.rating-stamp{position:absolute;left:2rem;bottom:2rem;z-index:2;background:#fff;padding:1.1rem 1.4rem;display:flex;align-items:center;gap:1rem;box-shadow:0 20px 40px -18px rgba(10,17,80,.45)}
+.rating-stamp{position:absolute;left:2rem;top:2rem;z-index:2;background:#fff;padding:1.1rem 1.4rem;display:flex;align-items:center;gap:1rem;box-shadow:0 20px 40px -18px rgba(10,17,80,.45)}
 .rating-stamp .n{font-family:"Archivo";font-variation-settings:"wdth" 68;font-weight:900;font-size:3rem;line-height:1;color:var(--ink)}
 .stars{display:flex;gap:2px;color:#E8A317}
 .stars svg{width:16px;height:16px}
@@ -150,7 +150,7 @@ nav.main a:hover::after,nav.main a.on::after{width:100%}
 .why-photo{position:relative}
 .why-photo .main{height:620px;--cut:48px}
 .why-photo .main img{width:100%;height:100%;object-fit:cover}
-.dry{position:absolute;right:-2.5rem;bottom:3rem;background:var(--brick);color:#fff;padding:1.6rem 1.8rem;width:240px}
+.dry{position:absolute;right:-2.5rem;top:3rem;background:var(--brick);color:#fff;padding:1.6rem 1.8rem;width:240px}
 .dry .big{font-family:"Archivo";font-variation-settings:"wdth" 62;font-weight:900;font-size:4.2rem;line-height:.9}
 .dry .big sup{font-size:1.6rem;vertical-align:top}
 .dry p{font-size:.9rem;margin-top:.6rem;color:#FFE3DA;line-height:1.4}
@@ -187,16 +187,33 @@ nav.main a:hover::after,nav.main a.on::after{width:100%}
 .g-chip{display:flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--muted)}
 .g-chip svg{width:16px;height:16px}
 
-/* ===== trust strip ===== */
-.trust{background:var(--ink-2);color:#fff;padding:4.5rem 0}
-.trust-grid{display:grid;grid-template-columns:1.1fr repeat(5,1fr);gap:0;align-items:stretch}
-.trust-title{padding-right:2rem}
-.trust-title h2{font-size:clamp(1.8rem,2.6vw,2.4rem)}
-.trust-title p{color:#C9CDEA;margin-top:.6rem;font-size:.95rem}
-.seal{border-left:1px solid rgba(255,255,255,.15);padding:1rem 1.2rem;display:flex;flex-direction:column;align-items:flex-start;gap:1rem;justify-content:center}
-.seal .ring{width:58px;height:58px;border:2px solid #F0613B;display:grid;place-items:center;transform:rotate(45deg)}
-.seal .ring svg{width:24px;height:24px;transform:rotate(-45deg);color:#fff}
-.seal b{font-size:.98rem;line-height:1.25}
+/* ===== trust (redesign) ===== */
+.trust{background:var(--ink);color:#fff;padding:7rem 0;position:relative;overflow:hidden}
+.trust::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 2px,transparent 2px 22px);pointer-events:none}
+.trust::after{content:"";position:absolute;left:-10%;bottom:-40%;width:60%;aspect-ratio:1;background:radial-gradient(circle,rgba(179,45,10,.35),transparent 65%);pointer-events:none}
+.trust-wrap{display:grid;grid-template-columns:.9fr 1.4fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.trust-intro h2{font-size:clamp(2.6rem,4.6vw,4.4rem);margin:1.1rem 0 2.6rem}
+.trust-intro h2 span{color:#F0613B}
+.stamp{position:relative;width:230px;height:230px}
+.stamp svg.ring-text{position:absolute;inset:0;width:100%;height:100%;animation:spin 22s linear infinite}
+.stamp svg.ring-text text{font-family:"Archivo Narrow",sans-serif;font-weight:700;font-size:11.5px;letter-spacing:3.2px;fill:#fff;text-transform:uppercase}
+.stamp .core{position:absolute;inset:42px;background:#fff;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 6px rgba(255,255,255,.08),0 0 0 14px rgba(240,97,59,.25)}
+.stamp .core img{width:78%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.trust-tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.tile{grid-column:span 2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:1.8rem 1.6rem 1.6rem;position:relative;transition:transform .35s,background .35s,border-color .35s;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;--cut:22px}
+.tile:nth-child(4),.tile:nth-child(5){grid-column:span 3}
+.tile::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;background:#F0613B;transition:width .45s}
+.tile:hover{transform:translateY(-6px);background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.25)}
+.tile:hover::after{width:100%}
+.tile .no{position:absolute;right:1.2rem;top:.6rem;font-family:"Archivo";font-variation-settings:"wdth" 62;font-weight:900;font-size:4.2rem;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18)}
+.tile .ic{width:64px;height:64px;display:grid;place-items:center;background:#F0613B;color:#fff}
+.tile .ic svg{width:30px;height:30px}
+.tile b{font-family:"Archivo";font-variation-settings:"wdth" 75;font-weight:800;text-transform:uppercase;font-size:1.3rem;line-height:1.1;letter-spacing:.01em;margin-top:1.6rem;display:block}
+.tile.hl{background:#B32D0A;border-color:#B32D0A}
+.tile.hl .ic{background:#fff;color:#B32D0A}
+.tile.hl .no{-webkit-text-stroke-color:rgba(255,255,255,.35)}
+.tile.hl::after{background:#fff}
 
 /* ===== contact ===== */
 .contact{padding:7rem 0;background:var(--paper)}
@@ -261,9 +278,9 @@ footer ul a:hover{color:#fff}
   .svc{grid-template-columns:70px 1fr 280px}
   .svc p{grid-column:2}
   .svc .pic{grid-row:1/3;grid-column:3}
-  .trust-grid{grid-template-columns:repeat(5,1fr)}
-  .trust-title{grid-column:1/-1;padding:0 0 2rem}
-  .seal:nth-child(2){border-left:0}
+  .trust-wrap{grid-template-columns:1fr;gap:3rem}
+  .trust-intro{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+  .trust-intro h2{margin-bottom:0}
   .dry{right:1rem}
 }
 @media (max-width:900px){
@@ -280,8 +297,12 @@ footer ul a:hover{color:#fff}
   .svc .num{padding:0}
   .svc .pic{grid-row:auto;grid-column:auto;height:220px;order:-1}
   .svc p{grid-column:auto}
-  .trust-grid{grid-template-columns:repeat(2,1fr)}
-  .seal{border-left:0;border-top:1px solid rgba(255,255,255,.15);padding:1.4rem 0}
+  .trust-tiles{grid-template-columns:1fr 1fr}
+  .tile,.tile:nth-child(4),.tile:nth-child(5){grid-column:span 1;min-height:180px}
+  .tile:nth-child(5){grid-column:1/-1}
+  .trust-intro{grid-template-columns:1fr}
+  .stamp{width:180px;height:180px}
+  .stamp .core{inset:34px}
   .util .right{display:none}
 }
 @media (max-width:560px){
@@ -293,7 +314,9 @@ footer ul a:hover{color:#fff}
   .rating-stamp .div,.rating-stamp .pr{display:none}
   .call-panel,.info-panel{padding:2.4rem 1.6rem}
   .dry{position:relative;right:auto;bottom:auto;width:100%;margin-top:-2px}
-  .action,.services,.why,.reviews,.contact{padding:4.5rem 0}
+  .action,.services,.why,.reviews,.contact,.trust{padding:4.5rem 0}
+  .tile b{font-size:1.05rem}
+  .tile{padding:1.4rem 1.2rem}
 }
 </style>
 </head>
@@ -341,7 +364,7 @@ footer ul a:hover{color:#fff}
   </div>
   <div class="wrap hero-stage">
     <div class="hero-photo chamfer">
-      <img src="images/stairs-carpet-cleaning.jpg" alt="Technician steam cleaning patterned stair carpet in a Calgary home">
+      <img src="images/hero-carpet-extraction.jpg" alt="Technician using a hot water extraction wand on a carpet in a bright Calgary condo" style="object-position:40% 70%">
       <div class="rating-stamp">
         <div>
           <div class="n">4.9</div>
@@ -391,7 +414,7 @@ footer ul a:hover{color:#fff}
     <div class="viewfinder rv">
       <i></i><i></i><i></i><i></i>
       <span class="rec">REC</span>
-      <video src="https://wondercleaning.ca/assets/clean_video_web-Dtc5Ajiq.mp4" poster="images/carpet-cleaning.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+      <video src="https://wondercleaning.ca/assets/clean_video_web-Dtc5Ajiq.mp4" poster="images/stairs-carpet-cleaning.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
     </div>
   </div>
 </section>
@@ -444,7 +467,7 @@ footer ul a:hover{color:#fff}
 <section class="why" id="why">
   <div class="wrap why-grid">
     <div class="why-photo rv">
-      <div class="main chamfer"><img src="images/upholstery-cleaning.jpg" alt="Wonder Cleaning technician deep cleaning upholstery" loading="lazy" style="object-position:70% center"></div>
+      <div class="main chamfer"><img src="images/spot-treatment-technician.jpg" alt="Technician pre-treating a carpet stain beside a hot water extraction machine" loading="lazy" style="object-position:center 65%"></div>
       <div class="dry">
         <div class="big">2-4<sup>hrs*</sup></div>
         <p>Powerful Hot Water Extraction with drying times of few hours</p>
@@ -495,16 +518,24 @@ footer ul a:hover{color:#fff}
 
 <!-- why trust us -->
 <section class="trust">
-  <div class="wrap trust-grid">
-    <div class="trust-title">
-      <span class="tag" style="color:#F0613B">Why Trust Us</span>
-      <h2 class="cond" style="margin-top:.8rem">Certified, insured, and committed to quality</h2>
+  <div class="wrap trust-wrap">
+    <div class="trust-intro rv">
+      <div>
+        <span class="tag" style="color:#F0613B">Why Trust Us</span>
+        <h2 class="cond">Certified, insured, <span>and committed to quality</span></h2>
+      </div>
+      <div class="stamp">
+        <svg class="ring-text" viewBox="0 0 230 230" aria-hidden="true"><defs><path id="circ" d="M115,115 m-98,0 a98,98 0 1,1 196,0 a98,98 0 1,1 -196,0"/></defs><text><textPath href="#circ" textLength="606" lengthAdjust="spacing">Certified &#8226; Insured &#8226; Committed to Quality &#8226; Calgary &#8226;</textPath></text></svg>
+        <div class="core"><img src="images/logo.png" alt="Wonder Cleaning Systems"></div>
+      </div>
     </div>
-    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><b>Satisfaction Guarantee</b></div>
-    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-2.5 5 2.5-1.5-7"/></svg></div><b>Certified Professionals</b></div>
-    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h6l2 3-2 3h-5M14 3.5l-1 4 3 2.5h4.5M15 20l1-4 3.5-1"/></svg></div><b>Planet Safe</b></div>
-    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><b>Child &amp; Pet Safe</b></div>
-    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19c9 0 14-5 14-14-9 0-14 5-14 14z"/><path d="M5 19l8-8"/></svg></div><b>Allergy Friendly</b></div>
+    <div class="trust-tiles">
+      <div class="tile chamfer hl rv"><span class="no">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><b>Satisfaction Guarantee</b></div>
+      <div class="tile chamfer rv"><span class="no">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-2.5 5 2.5-1.5-7"/><path d="M9.8 9l1.5 1.5 3-3"/></svg></div><b>Certified Professionals</b></div>
+      <div class="tile chamfer rv"><span class="no">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h6l2 3-2 3h-5M14 3.5l-1 4 3 2.5h4.5M15 20l1-4 3.5-1"/></svg></div><b>Planet Safe</b></div>
+      <div class="tile chamfer rv"><span class="no">04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="9" r="2"/><circle cx="10" cy="5" r="2"/><circle cx="14" cy="5" r="2"/><circle cx="18" cy="9" r="2"/><path d="M12 11c-3 0-5.5 3.5-5.5 6 0 2 1.5 3 3 3 1 0 1.6-.5 2.5-.5s1.5.5 2.5.5c1.5 0 3-1 3-3 0-2.5-2.5-6-5.5-6z"/></svg></div><b>Child &amp; Pet Safe</b></div>
+      <div class="tile chamfer rv"><span class="no">05</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19c9 0 14-5 14-14-9 0-14 5-14 14z"/><path d="M5 19l8-8"/></svg></div><b>Allergy Friendly</b></div>
+    </div>
   </div>
 </section>
 
@@ -530,7 +561,7 @@ footer ul a:hover{color:#fff}
 
 <!-- closing -->
 <section class="closing">
-  <img src="images/mattress-steam-cleaning.jpg" alt="Cleaners steam cleaning a mattress in a bright bedroom" loading="lazy" style="object-position:right center">
+  <img src="images/clean-living-bedroom.jpg" alt="Freshly cleaned carpet in a bright bedroom and living area" loading="lazy" style="object-position:right center">
   <div class="wrap">
     <span class="tag">Premium Cleaning Care</span>
     <h2 class="cond">A cleaner space.<span>A better feeling.</span></h2>
