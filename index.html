@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carpet Cleaning Calgary | Upholstery &amp; Steam Cleaning | Wonder Cleaning Systems</title>
+<meta name="description" content="Professional carpet, upholstery, mattress steam and vehicle interior cleaning in Calgary for homes, businesses and vehicles.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A1150;      /* logo deep navy */
+  --ink-2:#121B63;
+  --steel:#275179;    /* logo wordmark blue */
+  --brick:#B32D0A;    /* logo swoosh red */
+  --brick-d:#8E2207;
+  --paper:#F3EFE7;
+  --paper-2:#E9E3D7;
+  --line:#D8D0C1;
+  --text:#1B1F33;
+  --muted:#5C6075;
+  --white:#fff;
+  --cut:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 100;color:var(--text);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+.cond{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 68;font-weight:800;text-transform:uppercase;letter-spacing:.005em;line-height:.92}
+.tag{font-family:"Archivo Narrow",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;color:var(--brick);display:inline-flex;align-items:center;gap:.7rem}
+.tag::before{content:"";width:26px;height:2px;background:currentColor}
+.btn{display:inline-flex;align-items:center;gap:.65rem;font-weight:700;font-size:.95rem;padding:1rem 1.5rem;border:2px solid transparent;transition:.25s;cursor:pointer;letter-spacing:.01em}
+.btn svg{width:18px;height:18px;transition:transform .25s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-red{background:var(--brick);color:#fff}
+.btn-red:hover{background:var(--brick-d)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--steel)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-line-w{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-line-w:hover{background:#fff;color:var(--ink)}
+.chamfer{clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,var(--cut) 100%,0 calc(100% - var(--cut)))}
+
+/* ===== utility bar ===== */
+.util{background:var(--ink);color:#C9CDEA;font-size:.82rem}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+.util a{color:#fff;font-weight:600}
+.util .left{display:flex;gap:1.6rem;flex-wrap:wrap}
+.util .left span b{color:#fff;font-weight:600}
+.util .dot{display:inline-block;width:6px;height:6px;background:var(--brick);margin-right:.5rem;transform:rotate(45deg)}
+
+/* ===== header ===== */
+header.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo img{height:62px;width:auto}
+nav.main{display:flex;align-items:center;gap:2.2rem}
+nav.main a{font-weight:600;font-size:.95rem;color:var(--ink);position:relative;padding:.3rem 0}
+nav.main a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--brick);transition:width .25s}
+nav.main a:hover::after,nav.main a.on::after{width:100%}
+.hdr-cta{display:flex;align-items:center;gap:1.2rem}
+.hdr-phone{display:flex;flex-direction:column;line-height:1.15;text-align:right}
+.hdr-phone small{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.hdr-phone a{font-weight:800;color:var(--ink);font-size:1.05rem}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:26px;height:2px;background:var(--ink);margin:6px auto}
+
+/* ===== hero ===== */
+.hero{background:var(--paper);position:relative;overflow:hidden;padding:4.5rem 0 0}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
+.hero h1{font-size:clamp(3.2rem,9.4vw,9.4rem);color:var(--ink);margin-top:1.4rem}
+.hero h1 .r{color:var(--brick);display:block}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:2px var(--ink)}
+.hero-side{writing-mode:vertical-rl;transform:rotate(180deg);font-family:"Archivo Narrow";font-weight:600;letter-spacing:.35em;font-size:.78rem;color:var(--steel);text-transform:uppercase;padding-bottom:.6rem}
+.hero-stage{position:relative;margin-top:3rem;display:grid;grid-template-columns:minmax(0,1fr) 420px;align-items:stretch}
+.hero-photo{position:relative;min-height:520px;--cut:44px}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,17,80,.35),transparent 55%)}
+.hero-card{background:var(--ink);color:#fff;padding:2.6rem 2.4rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.8rem;position:relative}
+.hero-card::before{content:"";position:absolute;left:0;top:0;width:100%;height:6px;background:repeating-linear-gradient(90deg,var(--brick) 0 40px,transparent 40px 48px)}
+.hero-card h2{font-size:1.45rem;font-weight:800;line-height:1.2;font-variation-settings:"wdth" 90}
+.hero-card p{color:#C9CDEA;font-size:1rem}
+.hero-card .btns{display:flex;flex-direction:column;gap:.7rem}
+.hero-card .btns .btn{justify-content:space-between}
+.rating-stamp{position:absolute;left:2rem;bottom:2rem;z-index:2;background:#fff;padding:1.1rem 1.4rem;display:flex;align-items:center;gap:1rem;box-shadow:0 20px 40px -18px rgba(10,17,80,.45)}
+.rating-stamp .n{font-family:"Archivo";font-variation-settings:"wdth" 68;font-weight:900;font-size:3rem;line-height:1;color:var(--ink)}
+.stars{display:flex;gap:2px;color:#E8A317}
+.stars svg{width:16px;height:16px}
+.rating-stamp small{display:block;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-top:.2rem}
+.rating-stamp .div{width:1px;align-self:stretch;background:var(--line)}
+.rating-stamp .pr{font-size:.82rem;font-weight:600;color:var(--steel);max-width:150px;line-height:1.35}
+
+/* ticker */
+.ticker{background:var(--brick);color:#fff;overflow:hidden;border-top:1px solid rgba(255,255,255,.2)}
+.ticker-track{display:flex;gap:3rem;padding:1.05rem 0;width:max-content;animation:tick 38s linear infinite}
+.ticker span{font-family:"Archivo";font-variation-settings:"wdth" 70;font-weight:800;text-transform:uppercase;font-size:1.35rem;letter-spacing:.04em;display:flex;align-items:center;gap:3rem;white-space:nowrap}
+.ticker span::after{content:"";width:10px;height:10px;border:2px solid #fff;transform:rotate(45deg)}
+.ticker span.soft{opacity:.75;font-weight:600}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ===== video / see us in action ===== */
+.action{background:var(--ink);color:#fff;padding:7rem 0;position:relative;overflow:hidden}
+.action::before{content:"WONDER";position:absolute;right:-2vw;top:1.5rem;font-family:"Archivo";font-variation-settings:"wdth" 62;font-weight:900;font-size:18vw;line-height:1;color:rgba(255,255,255,.03);pointer-events:none}
+.action-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:4.5rem;align-items:center;position:relative}
+.action h2{font-size:clamp(2.4rem,4.6vw,4.2rem);margin:1.2rem 0 1.4rem}
+.action h2 em{font-style:normal;color:#F0613B}
+.action p{color:#C9CDEA;font-size:1.08rem;max-width:440px}
+.action .tag{color:#F0613B}
+.viewfinder{position:relative;padding:18px}
+.viewfinder i{position:absolute;width:44px;height:44px;border-color:#F0613B;border-style:solid}
+.viewfinder i:nth-child(1){top:0;left:0;border-width:3px 0 0 3px}
+.viewfinder i:nth-child(2){top:0;right:0;border-width:3px 3px 0 0}
+.viewfinder i:nth-child(3){bottom:0;left:0;border-width:0 0 3px 3px}
+.viewfinder i:nth-child(4){bottom:0;right:0;border-width:0 3px 3px 0}
+.viewfinder video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+.rec{position:absolute;top:34px;left:34px;z-index:2;display:flex;align-items:center;gap:.5rem;font-family:"Archivo Narrow";font-weight:700;font-size:.75rem;letter-spacing:.2em;background:rgba(0,0,0,.45);padding:.35rem .7rem}
+.rec::before{content:"";width:9px;height:9px;border-radius:50%;background:#F0613B;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.2}}
+.action-feats{display:flex;gap:2.2rem;margin-top:2.4rem;flex-wrap:wrap}
+.action-feats div{display:flex;align-items:center;gap:.7rem;font-weight:600;font-size:.95rem}
+.action-feats svg{width:22px;height:22px;color:#F0613B;flex:none}
+
+/* ===== services index ===== */
+.services{padding:7rem 0 6rem;background:#fff}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:3.5rem}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,4.4rem);color:var(--ink);margin-top:1rem}
+.sec-head p{color:var(--muted);font-size:1.08rem;max-width:460px;justify-self:end}
+.svc-list{border-top:2px solid var(--ink)}
+.svc{display:grid;grid-template-columns:90px 1.1fr 1fr 360px;gap:2.2rem;align-items:center;padding:2.2rem 0;border-bottom:1px solid var(--line);transition:background .3s;position:relative}
+.svc:hover{background:var(--paper)}
+.svc .num{font-family:"Archivo";font-variation-settings:"wdth" 62;font-weight:900;font-size:3.2rem;color:transparent;-webkit-text-stroke:1.5px var(--brick);padding-left:.6rem;line-height:1}
+.svc h3{font-family:"Archivo";font-variation-settings:"wdth" 75;font-weight:800;font-size:clamp(1.5rem,2.4vw,2.1rem);text-transform:uppercase;line-height:1;color:var(--ink)}
+.svc p{color:var(--muted)}
+.svc .go{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;color:var(--brick);margin-top:1rem;font-size:.92rem}
+.svc .go svg{width:16px;height:16px;transition:transform .25s}
+.svc:hover .go svg{transform:translateX(5px)}
+.svc .pic{height:200px;overflow:hidden;--cut:22px}
+.svc .pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.svc:hover .pic img{transform:scale(1.06)}
+.svc-foot{display:flex;justify-content:space-between;align-items:center;margin-top:2.5rem;gap:1rem;flex-wrap:wrap}
+.svc-foot p{color:var(--muted)}
+
+/* ===== why choose us ===== */
+.why{background:var(--paper);padding:7rem 0;position:relative}
+.why-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
+.why-photo{position:relative}
+.why-photo .main{height:620px;--cut:48px}
+.why-photo .main img{width:100%;height:100%;object-fit:cover}
+.dry{position:absolute;right:-2.5rem;bottom:3rem;background:var(--brick);color:#fff;padding:1.6rem 1.8rem;width:240px}
+.dry .big{font-family:"Archivo";font-variation-settings:"wdth" 62;font-weight:900;font-size:4.2rem;line-height:.9}
+.dry .big sup{font-size:1.6rem;vertical-align:top}
+.dry p{font-size:.9rem;margin-top:.6rem;color:#FFE3DA;line-height:1.4}
+.why h2{font-size:clamp(2.6rem,5vw,4.6rem);color:var(--ink);margin:1rem 0 1.3rem}
+.why .lead{font-size:1.12rem;color:var(--muted);max-width:520px}
+.checks{margin:2.6rem 0 2.6rem;display:grid;gap:0;border-top:1px solid var(--line)}
+.checks li{list-style:none;display:grid;grid-template-columns:52px 1fr;gap:1.1rem;padding:1.3rem 0;border-bottom:1px solid var(--line);align-items:start}
+.checks .ic{width:52px;height:52px;background:var(--ink);color:#fff;display:grid;place-items:center}
+.checks .ic svg{width:24px;height:24px}
+.checks b{display:block;color:var(--ink);font-size:1.08rem;margin-bottom:.15rem}
+.checks span{color:var(--muted);font-size:.98rem}
+
+/* ===== reviews ===== */
+.reviews{padding:7rem 0;background:#fff;overflow:hidden}
+.rev-head{display:grid;grid-template-columns:auto 1fr auto;gap:3rem;align-items:end;margin-bottom:3rem}
+.rev-score{font-family:"Archivo";font-variation-settings:"wdth" 62;font-weight:900;font-size:clamp(7rem,13vw,11rem);line-height:.8;color:var(--ink)}
+.rev-score span{color:transparent;-webkit-text-stroke:2px var(--brick)}
+.rev-head h2{font-size:clamp(2rem,3.6vw,3.2rem);color:var(--ink);margin:.8rem 0 .6rem}
+.rev-head p{color:var(--muted);display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.arrows{display:flex;gap:.6rem}
+.arrows button{width:56px;height:56px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:.2s}
+.arrows button:hover{background:var(--ink);color:#fff}
+.arrows svg{width:20px;height:20px}
+.rev-track{display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.5rem}
+.rev-track::-webkit-scrollbar{display:none}
+.ticket{flex:0 0 min(380px,82vw);scroll-snap-align:start;background:var(--paper);display:flex;flex-direction:column;position:relative}
+.ticket .body{padding:2rem 2rem 1.6rem;flex:1}
+.ticket .q{font-family:"Archivo";font-variation-settings:"wdth" 62;font-weight:900;font-size:4rem;line-height:.6;color:var(--brick);height:28px}
+.ticket blockquote{font-size:1.08rem;color:var(--text);margin-top:.6rem}
+.ticket .stub{border-top:2px dashed var(--line);padding:1.1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:relative}
+.ticket .stub::before,.ticket .stub::after{content:"";position:absolute;top:-11px;width:20px;height:20px;border-radius:50%;background:#fff}
+.ticket .stub::before{left:-10px}.ticket .stub::after{right:-10px}
+.ticket .who{font-weight:800;color:var(--ink)}
+.g-chip{display:flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;color:var(--muted)}
+.g-chip svg{width:16px;height:16px}
+
+/* ===== trust strip ===== */
+.trust{background:var(--ink-2);color:#fff;padding:4.5rem 0}
+.trust-grid{display:grid;grid-template-columns:1.1fr repeat(5,1fr);gap:0;align-items:stretch}
+.trust-title{padding-right:2rem}
+.trust-title h2{font-size:clamp(1.8rem,2.6vw,2.4rem)}
+.trust-title p{color:#C9CDEA;margin-top:.6rem;font-size:.95rem}
+.seal{border-left:1px solid rgba(255,255,255,.15);padding:1rem 1.2rem;display:flex;flex-direction:column;align-items:flex-start;gap:1rem;justify-content:center}
+.seal .ring{width:58px;height:58px;border:2px solid #F0613B;display:grid;place-items:center;transform:rotate(45deg)}
+.seal .ring svg{width:24px;height:24px;transform:rotate(-45deg);color:#fff}
+.seal b{font-size:.98rem;line-height:1.25}
+
+/* ===== contact ===== */
+.contact{padding:7rem 0;background:var(--paper)}
+.contact-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:0;box-shadow:0 30px 60px -30px rgba(10,17,80,.35)}
+.call-panel{background:var(--brick);color:#fff;padding:3.6rem 3.4rem;position:relative;overflow:hidden}
+.call-panel .tag{color:#FFD7CB}
+.call-panel h2{font-size:clamp(2.6rem,5vw,4.6rem);margin:1.1rem 0 1rem}
+.call-panel .motto{font-size:1.1rem;color:#FFE3DA;max-width:420px}
+.call-panel .motto b{color:#fff}
+.bigphone{display:block;font-family:"Archivo";font-variation-settings:"wdth" 70;font-weight:900;font-size:clamp(2.8rem,6vw,5.4rem);line-height:1;margin:2.4rem 0 .6rem;letter-spacing:-.01em;transition:opacity .2s}
+.bigphone:hover{opacity:.85}
+.tollfree{font-weight:600;color:#FFE3DA}
+.tollfree a{color:#fff;border-bottom:1px solid rgba(255,255,255,.5)}
+.info-panel{background:#fff;padding:3.2rem 3rem;display:flex;flex-direction:column}
+.info-row{display:grid;grid-template-columns:46px 1fr;gap:1rem;padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.info-row:first-child{padding-top:0}
+.info-row .ic{width:46px;height:46px;border:2px solid var(--ink);display:grid;place-items:center;color:var(--ink)}
+.info-row .ic svg{width:20px;height:20px}
+.info-row small{display:block;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--muted);font-weight:600}
+.info-row a,.info-row div>span{font-weight:700;color:var(--ink);font-size:1.08rem;word-break:break-word}
+.info-row a:hover{color:var(--brick)}
+.info-panel .btn{margin-top:2rem;justify-content:space-between}
+
+/* ===== closing ===== */
+.closing{position:relative;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
+.closing img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.closing::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,17,80,.95) 0%,rgba(10,17,80,.85) 42%,rgba(10,17,80,.15) 75%);z-index:1}
+.closing .wrap{position:relative;z-index:2;padding:5rem 0}
+.closing .tag{color:#F0613B}
+.closing h2{font-size:clamp(3rem,7vw,6.4rem);margin:1.2rem 0 1.4rem}
+.closing h2 span{display:block;color:transparent;-webkit-text-stroke:2px #fff}
+.closing p{max-width:470px;color:#D7DAF0;font-size:1.08rem;margin-bottom:2rem}
+
+/* ===== footer ===== */
+footer{background:#070C3A;color:#B9BEDF;padding:5rem 0 0;font-size:.95rem}
+.f-grid{display:grid;grid-template-columns:1.5fr .8fr 1fr;gap:4rem;padding-bottom:3.5rem}
+.f-logo{background:#fff;display:inline-block;padding:.8rem 1rem;margin-bottom:1.5rem}
+.f-logo img{height:64px}
+.f-about p+p{margin-top:.8rem}
+.f-badges{display:flex;gap:1.4rem;margin-top:1.5rem;flex-wrap:wrap}
+.f-badges span{display:flex;align-items:center;gap:.5rem;color:#fff;font-weight:600;font-size:.88rem}
+.f-badges svg{width:18px;height:18px;color:#F0613B}
+footer h4{font-family:"Archivo Narrow";text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;color:#F0613B;margin-bottom:1.3rem}
+footer ul{list-style:none;display:grid;gap:.75rem}
+footer ul a:hover{color:#fff}
+.f-contact a{color:#fff;font-weight:600}
+.f-contact a:hover{color:#F0613B}
+.fb{display:inline-flex;align-items:center;gap:.55rem;margin-top:.4rem}
+.fb svg{width:20px;height:20px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding:1.6rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.86rem}
+.f-bottom a{color:#fff;font-weight:600}
+.f-bottom a:hover{color:#F0613B}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ===== responsive ===== */
+@media (max-width:1100px){
+  .hero-stage{grid-template-columns:1fr}
+  .hero-photo{min-height:420px}
+  .svc{grid-template-columns:70px 1fr 280px}
+  .svc p{grid-column:2}
+  .svc .pic{grid-row:1/3;grid-column:3}
+  .trust-grid{grid-template-columns:repeat(5,1fr)}
+  .trust-title{grid-column:1/-1;padding:0 0 2rem}
+  .seal:nth-child(2){border-left:0}
+  .dry{right:1rem}
+}
+@media (max-width:900px){
+  nav.main,.hdr-phone{display:none}
+  .burger{display:block}
+  nav.main.open{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:#fff;padding:1.5rem 4vw;gap:1.2rem;align-items:flex-start;border-bottom:1px solid var(--line)}
+  .hero-side{display:none}
+  .hero-grid{grid-template-columns:1fr}
+  .action-grid,.why-grid,.contact-grid,.sec-head,.f-grid{grid-template-columns:1fr}
+  .sec-head p{justify-self:start}
+  .why-photo .main{height:460px}
+  .rev-head{grid-template-columns:1fr;gap:1rem}
+  .svc{grid-template-columns:1fr;gap:1rem}
+  .svc .num{padding:0}
+  .svc .pic{grid-row:auto;grid-column:auto;height:220px;order:-1}
+  .svc p{grid-column:auto}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .seal{border-left:0;border-top:1px solid rgba(255,255,255,.15);padding:1.4rem 0}
+  .util .right{display:none}
+}
+@media (max-width:560px){
+  .util{display:none}
+  .logo img{height:50px}
+  .hero{padding-top:3rem}
+  .hero-card{padding:2rem 1.5rem}
+  .rating-stamp{left:1rem;bottom:1rem;padding:.8rem 1rem}
+  .rating-stamp .div,.rating-stamp .pr{display:none}
+  .call-panel,.info-panel{padding:2.4rem 1.6rem}
+  .dry{position:relative;right:auto;bottom:auto;width:100%;margin-top:-2px}
+  .action,.services,.why,.reviews,.contact{padding:4.5rem 0}
+}
+</style>
+</head>
+<body>
+
+<!-- utility bar -->
+<div class="util">
+  <div class="wrap">
+    <div class="left">
+      <span><i class="dot"></i>Call For Free Estimates: <a href="tel:+15873296262">587-329-6262</a></span>
+      <span>Toll Free: <a href="tel:+18777701343">1-877-770-1343</a></span>
+    </div>
+    <div class="right"><a href="mailto:wondercleaningyyc@outlook.com">wondercleaningyyc@outlook.com</a></div>
+  </div>
+</div>
+
+<!-- header -->
+<header class="top">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="Wonder Cleaning Systems home"><img src="images/logo.png" alt="Wonder Cleaning Systems logo"></a>
+    <nav class="main" id="nav">
+      <a href="/" class="on">Home</a>
+      <a href="/services">Services</a>
+      <a href="/why-us">Why Us</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <div class="hdr-cta">
+      <div class="hdr-phone"><small>Free Estimates</small><a href="tel:+15873296262">587-329-6262</a></div>
+      <a href="/contact" class="btn btn-red">Get Quote</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="tag">Premium Cleaning Services in Calgary</span>
+        <h1 class="cond">Exceptional <span class="outline">Cleaning.</span><span class="r">Remarkable Results.</span></h1>
+      </div>
+      <div class="hero-side">Calgary &middot; Alberta</div>
+    </div>
+  </div>
+  <div class="wrap hero-stage">
+    <div class="hero-photo chamfer">
+      <img src="images/stairs-carpet-cleaning.jpg" alt="Technician steam cleaning patterned stair carpet in a Calgary home">
+      <div class="rating-stamp">
+        <div>
+          <div class="n">4.9</div>
+        </div>
+        <div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg>
+          </div>
+          <small>Local Rating</small>
+        </div>
+        <div class="div"></div>
+        <div class="pr">Professional &bull; Reliable &bull; Detail-Focused</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div>
+        <h2>Professional Carpet Cleaning Calgary</h2>
+        <p style="margin-top:1rem">Premium carpet, upholstery, mattress and vehicle interior cleaning for Calgary homes and businesses. Professional results with carefully selected, family-friendly cleaning solutions.</p>
+      </div>
+      <div class="btns">
+        <a href="/contact" class="btn btn-red">Get Your Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="/services" class="btn btn-line-w">Explore Our Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="ticker" style="margin-top:0">
+    <div class="ticker-track">
+      <span>Calgary</span><span>Residential</span><span>Commercial</span><span>Carpet &amp; Upholstery</span><span class="soft">Faster-Drying</span><span class="soft">No Harsh Chemicals</span><span class="soft">Satisfaction Guarantee</span>
+      <span>Calgary</span><span>Residential</span><span>Commercial</span><span>Carpet &amp; Upholstery</span><span class="soft">Faster-Drying</span><span class="soft">No Harsh Chemicals</span><span class="soft">Satisfaction Guarantee</span>
+    </div>
+  </div>
+</section>
+
+<!-- see us in action -->
+<section class="action">
+  <div class="wrap action-grid">
+    <div class="rv">
+      <span class="tag">See Us In Action</span>
+      <h2 class="cond">Calgary Carpet &amp; Upholstery Cleaning. <em>Steam Cleaning Experts.</em></h2>
+      <p>Watch how our expert team transforms spaces with precision and care.</p>
+      <div class="action-feats">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5l2.6-1.5M17.2 9l2.6-1.5"/><circle cx="12" cy="12" r="3.2"/></svg>Faster-Drying</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c3.5 4.2 6 7.5 6 10.5a6 6 0 0 1-12 0C6 10.5 8.5 7.2 12 3z"/><path d="M4 4l16 16"/></svg>No Harsh Chemicals</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Satisfaction Guarantee</div>
+      </div>
+    </div>
+    <div class="viewfinder rv">
+      <i></i><i></i><i></i><i></i>
+      <span class="rec">REC</span>
+      <video src="https://wondercleaning.ca/assets/clean_video_web-Dtc5Ajiq.mp4" poster="images/carpet-cleaning.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+    </div>
+  </div>
+</section>
+
+<!-- services -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="tag">Premium Cleaning Services</span>
+        <h2 class="cond">Professional Cleaning,<br>Exceptional Results.</h2>
+      </div>
+      <p>Professional cleaning solutions for Calgary homes, businesses and vehicles, delivered with care and attention to detail.</p>
+    </div>
+
+    <div class="svc-list">
+      <a href="/carpet-cleaning-calgary" class="svc rv">
+        <div class="num">01</div>
+        <h3>Carpet Cleaning Calgary</h3>
+        <div><p>Professional deep carpet cleaning using advanced steam cleaning technology for homes and businesses.</p><span class="go">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="pic chamfer"><img src="images/carpet-cleaning.jpg" alt="Hot water extraction wand cleaning a light carpet" loading="lazy"></div>
+      </a>
+      <a href="/upholstery-cleaning-calgary" class="svc rv">
+        <div class="num">02</div>
+        <h3>Upholstery Cleaning Calgary</h3>
+        <div><p>Expert upholstery cleaning for sofas, chairs and furniture, helping restore a fresh, clean appearance.</p><span class="go">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="pic chamfer"><img src="images/upholstery-cleaning.jpg" alt="Technician cleaning a grey fabric sofa" loading="lazy"></div>
+      </a>
+      <a href="/mattress-steam-cleaning-calgary" class="svc rv">
+        <div class="num">03</div>
+        <h3>Mattress Steam Cleaning Calgary</h3>
+        <div><p>Deep steam cleaning for mattresses to help remove dust, allergens and everyday buildup.</p><span class="go">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="pic chamfer"><img src="images/mattress-steam-cleaning.jpg" alt="Two cleaners steam cleaning a mattress" loading="lazy"></div>
+      </a>
+      <a href="/car-interior-detailing-calgary" class="svc rv">
+        <div class="num">04</div>
+        <h3>Car Interior Detailing Calgary</h3>
+        <div><p>Complete interior cleaning for vehicle carpets, seats and upholstery to refresh your vehicle.</p><span class="go">Explore Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="pic chamfer"><img src="images/car-interior-detailing.jpg" alt="Detailing brush cleaning a car dashboard vent" loading="lazy"></div>
+      </a>
+    </div>
+    <div class="svc-foot rv">
+      <p>Residential &amp; Commercial cleaning services.</p>
+      <a href="/services" class="btn btn-ink">View All Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- why choose us -->
+<section class="why" id="why">
+  <div class="wrap why-grid">
+    <div class="why-photo rv">
+      <div class="main chamfer"><img src="images/upholstery-cleaning.jpg" alt="Wonder Cleaning technician deep cleaning upholstery" loading="lazy" style="object-position:70% center"></div>
+      <div class="dry">
+        <div class="big">2-4<sup>hrs*</sup></div>
+        <p>Powerful Hot Water Extraction with drying times of few hours</p>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="tag">Why Choose Us</span>
+      <h2 class="cond">Expert<br>Cleaners.</h2>
+      <p class="lead">We believe that every client has unique requirements. Our experienced team delivers the best solutions.</p>
+      <ul class="checks">
+        <li><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h8"/></svg></div><div><b>Improves Indoor Air Quality</b><span>by removing dust, allergens, and bacteria trapped deep in carpet fibers.</span></div></li>
+        <li><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="9" r="2"/><circle cx="10" cy="5" r="2"/><circle cx="14" cy="5" r="2"/><circle cx="18" cy="9" r="2"/><path d="M12 11c-3 0-5.5 3.5-5.5 6 0 2 1.5 3 3 3 1 0 1.6-.5 2.5-.5s1.5.5 2.5.5c1.5 0 3-1 3-3 0-2.5-2.5-6-5.5-6z"/></svg></div><div><b>Safe for Kids &amp; Pets</b><span>with residue-free, non-toxic cleaning solutions.</span></div></li>
+        <li><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c3.5 4.2 6 7.5 6 10.5a6 6 0 0 1-12 0C6 10.5 8.5 7.2 12 3z"/><path d="M9.5 14l1.8 1.8 3.5-3.6"/></svg></div><div><b>Deep, Residue-Free Clean</b><span>as hot water extraction rinses carpets thoroughly without leaving soap behind.</span></div></li>
+        <li><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></div><div><b>Powerful Hot Water Extraction</b><span>with drying times of few hours (2-4 hours*).</span></div></li>
+      </ul>
+      <a href="/why-us" class="btn btn-line">Learn More About Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- reviews -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="rev-head rv">
+      <div class="rev-score">4.<span>9</span></div>
+      <div>
+        <span class="tag">Google Reviews</span>
+        <h2 class="cond">What Our Customers Say</h2>
+        <p><span class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg></span> 4.9 Star Rating from 100+ Reviews</p>
+      </div>
+      <div class="arrows">
+        <button aria-label="Previous slide" onclick="slide(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button aria-label="Next slide" onclick="slide(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="rev-track" id="revs">
+      <article class="ticket"><div class="body"><div class="q">&ldquo;</div><blockquote>Above and beyond service. Fast and efficient. Well done.</blockquote></div><div class="stub"><span class="who">Anita E.</span><span class="g-chip"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.3-4.8 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.7c-1 .7-2.2 1-3.7 1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>Google</span></div></article>
+      <article class="ticket"><div class="body"><div class="q">&ldquo;</div><blockquote>They were on time, explained the process and did a thorough job. We have 8 cats, and the results exceeded my expectations!</blockquote></div><div class="stub"><span class="who">Pamela B.</span><span class="g-chip"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.3-4.8 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.7c-1 .7-2.2 1-3.7 1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>Google</span></div></article>
+      <article class="ticket"><div class="body"><div class="q">&ldquo;</div><blockquote>Excellent service - carpet and couch were cleaned very well, was on time and very polite. Will use this company again!</blockquote></div><div class="stub"><span class="who">Janice P.</span><span class="g-chip"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.3-4.8 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.7c-1 .7-2.2 1-3.7 1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>Google</span></div></article>
+      <article class="ticket"><div class="body"><div class="q">&ldquo;</div><blockquote>Fast, efficient, and super friendly service! Our ultra-stained carpets are now spotless. Thanks so much!</blockquote></div><div class="stub"><span class="who">Debb R.</span><span class="g-chip"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.3-4.8 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.7c-1 .7-2.2 1-3.7 1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>Google</span></div></article>
+      <article class="ticket"><div class="body"><div class="q">&ldquo;</div><blockquote>Second time using Wonder Cleaning and couldn't recommend them enough. Fantastic and went above and beyond!</blockquote></div><div class="stub"><span class="who">Millie R.</span><span class="g-chip"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.3-4.8 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.7c-1 .7-2.2 1-3.7 1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>Google</span></div></article>
+      <article class="ticket"><div class="body"><div class="q">&ldquo;</div><blockquote>Quick and easy to book, great service at a great price. Will definitely use again next time I need my carpets cleaned.</blockquote></div><div class="stub"><span class="who">Jane S.</span><span class="g-chip"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.3-4.8 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.7c-1 .7-2.2 1-3.7 1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>Google</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- why trust us -->
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-title">
+      <span class="tag" style="color:#F0613B">Why Trust Us</span>
+      <h2 class="cond" style="margin-top:.8rem">Certified, insured, and committed to quality</h2>
+    </div>
+    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><b>Satisfaction Guarantee</b></div>
+    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-2.5 5 2.5-1.5-7"/></svg></div><b>Certified Professionals</b></div>
+    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h6l2 3-2 3h-5M14 3.5l-1 4 3 2.5h4.5M15 20l1-4 3.5-1"/></svg></div><b>Planet Safe</b></div>
+    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><b>Child &amp; Pet Safe</b></div>
+    <div class="seal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19c9 0 14-5 14-14-9 0-14 5-14 14z"/><path d="M5 19l8-8"/></svg></div><b>Allergy Friendly</b></div>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid rv">
+    <div class="call-panel">
+      <span class="tag">Get In Touch</span>
+      <h2 class="cond">Call For Free Estimates</h2>
+      <p class="motto">Residential &amp; Commercial cleaning services. <b>"Dirt B-Gone"</b></p>
+      <a href="tel:+15873296262" class="bigphone">587-329-6262</a>
+      <p class="tollfree">Toll Free: <a href="tel:+18777701343">1-877-770-1343</a></p>
+    </div>
+    <div class="info-panel">
+      <div class="info-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><div><small>Phone</small><a href="tel:+15873296262">587-329-6262</a></div></div>
+      <div class="info-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/><path d="M15 3h6v6M21 3l-6 6"/></svg></div><div><small>Toll Free</small><a href="tel:+18777701343">1-877-770-1343</a></div></div>
+      <div class="info-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg></div><div><small>Email</small><a href="mailto:wondercleaningyyc@outlook.com">wondercleaningyyc@outlook.com</a></div></div>
+      <div class="info-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div><small>Location</small><span>Serving Calgary and surrounding areas</span></div></div>
+      <a href="/contact" class="btn btn-ink">Get Your Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- closing -->
+<section class="closing">
+  <img src="images/mattress-steam-cleaning.jpg" alt="Cleaners steam cleaning a mattress in a bright bedroom" loading="lazy" style="object-position:right center">
+  <div class="wrap">
+    <span class="tag">Premium Cleaning Care</span>
+    <h2 class="cond">A cleaner space.<span>A better feeling.</span></h2>
+    <p>Professional carpet, upholstery, mattress and vehicle interior cleaning for homes and businesses throughout Calgary and surrounding areas.</p>
+    <a href="/contact" class="btn btn-red">Get Your Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap f-grid">
+    <div class="f-about">
+      <a href="/" class="f-logo"><img src="images/logo.png" alt="Wonder Cleaning Systems logo"></a>
+      <p>Wonder Cleaning Systems provides professional carpet cleaning, upholstery cleaning, mattress steam cleaning and vehicle interior cleaning in Calgary and surrounding areas.</p>
+      <p>We focus on exceptional results, careful service and a professional experience from start to finish.</p>
+      <div class="f-badges">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/></svg>Professional &amp; Reliable</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/></svg>Serving Calgary &amp; surrounding areas</span>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Our Services</a></li>
+        <li><a href="/why-us">Why Choose Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="f-contact">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+15873296262">587-329-6262</a></li>
+        <li><a href="tel:+18777701343">1-877-770-1343</a></li>
+        <li><a href="mailto:wondercleaningyyc@outlook.com">wondercleaningyyc@outlook.com</a></li>
+        <li><a href="https://wondercleaning.ca">wondercleaning.ca</a></li>
+        <li><a href="https://facebook.com/wondercleaningyyc" target="_blank" rel="noopener" class="fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v7h4v-7h3l1-4h-4V8z"/></svg>Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap f-bottom">
+    <span>&copy; 2026 Wonder Cleaning Systems. All rights reserved. &nbsp;|&nbsp; Professional Cleaning &middot; Calgary, Alberta</span>
+    <span>Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital.</a></span>
+  </div>
+</footer>
+
+<script>
+function slide(d){const t=document.getElementById('revs');const c=t.querySelector('.ticket');t.scrollBy({left:d*(c.offsetWidth+24),behavior:'smooth'})}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
