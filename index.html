@@ -69,30 +69,36 @@ nav.main a:hover::after,nav.main a.on::after{width:100%}
 .burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
 .burger span{display:block;width:26px;height:2px;background:var(--ink);margin:6px auto}
 
-/* ===== hero ===== */
-.hero{background:var(--paper);position:relative;overflow:hidden;padding:4.5rem 0 0}
-.hero-grid{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
-.hero h1{font-size:clamp(3.2rem,9.4vw,9.4rem);color:var(--ink);margin-top:1.4rem}
-.hero h1 .r{color:var(--brick);display:block}
-.hero h1 .outline{color:transparent;-webkit-text-stroke:2px var(--ink)}
-.hero-side{writing-mode:vertical-rl;transform:rotate(180deg);font-family:"Archivo Narrow";font-weight:600;letter-spacing:.35em;font-size:.78rem;color:var(--steel);text-transform:uppercase;padding-bottom:.6rem}
-.hero-stage{position:relative;margin-top:3rem;display:grid;grid-template-columns:minmax(0,1fr) 420px;align-items:stretch}
-.hero-photo{position:relative;min-height:520px;--cut:44px}
-.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,17,80,.25),transparent 40%)}
-.hero-card{background:var(--ink);color:#fff;padding:2.6rem 2.4rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.8rem;position:relative}
-.hero-card::before{content:"";position:absolute;left:0;top:0;width:100%;height:6px;background:repeating-linear-gradient(90deg,var(--brick) 0 40px,transparent 40px 48px)}
-.hero-card h2{font-size:1.45rem;font-weight:800;line-height:1.2;font-variation-settings:"wdth" 90}
-.hero-card p{color:#C9CDEA;font-size:1rem}
-.hero-card .btns{display:flex;flex-direction:column;gap:.7rem}
-.hero-card .btns .btn{justify-content:space-between}
-.rating-stamp{position:absolute;left:2rem;top:2rem;z-index:2;background:#fff;padding:1.1rem 1.4rem;display:flex;align-items:center;gap:1rem;box-shadow:0 20px 40px -18px rgba(10,17,80,.45)}
-.rating-stamp .n{font-family:"Archivo";font-variation-settings:"wdth" 68;font-weight:900;font-size:3rem;line-height:1;color:var(--ink)}
+/* ===== hero (split, slanted seam) ===== */
+.hero{background:var(--ink);position:relative;overflow:hidden;color:#fff}
+.hero-split{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);min-height:min(calc(100vh - 120px),780px)}
+.hero-copy{position:relative;z-index:2;padding:5rem 3.5rem 4rem max(4vw,calc((100vw - 1240px)/2));display:flex;flex-direction:column;justify-content:center}
+.hero-copy::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 2px,transparent 2px 24px);pointer-events:none;z-index:-1}
+.hero-copy::after{content:"";position:absolute;left:-15%;top:-30%;width:70%;aspect-ratio:1;background:radial-gradient(circle,rgba(39,81,121,.55),transparent 65%);z-index:-1;pointer-events:none}
+.hero .tag{color:#F0613B}
+.hero h1{font-size:clamp(2.8rem,5.3vw,5.6rem);margin:1.3rem 0 1.6rem;color:#fff}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:1.5px #fff;display:block}
+.hero h1 .r{color:#F0613B;display:block}
+.hero-sub{display:flex;align-items:center;gap:.9rem;font-weight:800;font-size:1.15rem;margin-bottom:.8rem;font-variation-settings:"wdth" 90}
+.hero-sub::before{content:"";width:6px;height:28px;background:#F0613B}
+.hero-lead{color:#C9CDEA;font-size:1.06rem;max-width:520px}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:2.2rem}
+.hero-proof{display:flex;align-items:center;gap:1.4rem;margin-top:2.8rem;padding-top:1.8rem;border-top:1px solid rgba(255,255,255,.14);flex-wrap:wrap}
+.hero-proof .n{font-family:"Archivo";font-variation-settings:"wdth" 62;font-weight:900;font-size:3.1rem;line-height:1}
+.hero-proof small{display:block;font-size:.74rem;color:#AEB3D6;text-transform:uppercase;letter-spacing:.16em;margin-top:.25rem}
+.hero-proof .sep{width:1px;height:44px;background:rgba(255,255,255,.18)}
+.hero-proof .pr{font-weight:600;color:#fff;font-size:.95rem}
+.hero-media{position:relative;margin-left:-9vw}
+.hero-media .ph{position:absolute;inset:0;clip-path:polygon(9vw 0,100% 0,100% 100%,0 100%)}
+.hero-media .ph img{width:100%;height:100%;object-fit:cover;object-position:25% 70%}
+.hero-media .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,17,80,.45))}
+.seam{position:absolute;top:0;bottom:0;left:0;width:9vw;z-index:1;background:linear-gradient(to bottom right,transparent calc(50% - 3px),#F0613B calc(50% - 3px),#F0613B calc(50% + 3px),transparent calc(50% + 3px))}
+.inset{position:absolute;z-index:3;left:calc(9vw + 2.5rem);top:3rem;width:240px;background:#fff;padding:8px;box-shadow:0 30px 50px -20px rgba(0,0,0,.55);--cut:20px}
+.inset img{width:100%;height:160px;object-fit:cover;--cut:16px}
+.inset span{display:block;color:var(--ink);font-family:"Archivo Narrow";font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;padding:.7rem .4rem .35rem}
+
 .stars{display:flex;gap:2px;color:#E8A317}
 .stars svg{width:16px;height:16px}
-.rating-stamp small{display:block;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-top:.2rem}
-.rating-stamp .div{width:1px;align-self:stretch;background:var(--line)}
-.rating-stamp .pr{font-size:.82rem;font-weight:600;color:var(--steel);max-width:150px;line-height:1.35}
 
 /* ticker */
 .ticker{background:var(--brick);color:#fff;overflow:hidden;border-top:1px solid rgba(255,255,255,.2)}
@@ -273,8 +279,6 @@ footer ul a:hover{color:#fff}
 
 /* ===== responsive ===== */
 @media (max-width:1100px){
-  .hero-stage{grid-template-columns:1fr}
-  .hero-photo{min-height:420px}
   .svc{grid-template-columns:70px 1fr 280px}
   .svc p{grid-column:2}
   .svc .pic{grid-row:1/3;grid-column:3}
@@ -284,11 +288,16 @@ footer ul a:hover{color:#fff}
   .dry{right:1rem}
 }
 @media (max-width:900px){
-  nav.main,.hdr-phone{display:none}
+  .hero-split{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:3.5rem 4vw 3rem}
+  .hero-media{margin:0;height:380px}
+  .hero-media .ph{clip-path:polygon(0 8%,100% 0,100% 100%,0 100%)}
+  .seam{display:none}
+  .inset{left:auto;right:4vw;top:auto;bottom:1.5rem;width:170px}
+  .inset img{height:110px}
+    nav.main,.hdr-phone{display:none}
   .burger{display:block}
   nav.main.open{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:#fff;padding:1.5rem 4vw;gap:1.2rem;align-items:flex-start;border-bottom:1px solid var(--line)}
-  .hero-side{display:none}
-  .hero-grid{grid-template-columns:1fr}
   .action-grid,.why-grid,.contact-grid,.sec-head,.f-grid{grid-template-columns:1fr}
   .sec-head p{justify-self:start}
   .why-photo .main{height:460px}
@@ -306,12 +315,11 @@ footer ul a:hover{color:#fff}
   .util .right{display:none}
 }
 @media (max-width:560px){
+  .hero-btns .btn{width:100%;justify-content:space-between}
+  .hero-proof .sep{display:none}
+  .inset{display:none}
   .util{display:none}
   .logo img{height:50px}
-  .hero{padding-top:3rem}
-  .hero-card{padding:2rem 1.5rem}
-  .rating-stamp{left:1rem;bottom:1rem;padding:.8rem 1rem}
-  .rating-stamp .div,.rating-stamp .pr{display:none}
   .call-panel,.info-panel{padding:2.4rem 1.6rem}
   .dry{position:relative;right:auto;bottom:auto;width:100%;margin-top:-2px}
   .action,.services,.why,.reviews,.contact,.trust{padding:4.5rem 0}
@@ -353,41 +361,27 @@ footer ul a:hover{color:#fff}
 
 <!-- hero -->
 <section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <span class="tag">Premium Cleaning Services in Calgary</span>
-        <h1 class="cond">Exceptional <span class="outline">Cleaning.</span><span class="r">Remarkable Results.</span></h1>
-      </div>
-      <div class="hero-side">Calgary &middot; Alberta</div>
-    </div>
-  </div>
-  <div class="wrap hero-stage">
-    <div class="hero-photo chamfer">
-      <img src="images/hero-carpet-extraction.jpg" alt="Technician using a hot water extraction wand on a carpet in a bright Calgary condo" style="object-position:40% 70%">
-      <div class="rating-stamp">
-        <div>
-          <div class="n">4.9</div>
-        </div>
-        <div>
-          <div class="stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg>
-          </div>
-          <small>Local Rating</small>
-        </div>
-        <div class="div"></div>
-        <div class="pr">Professional &bull; Reliable &bull; Detail-Focused</div>
-      </div>
-    </div>
-    <div class="hero-card">
-      <div>
-        <h2>Professional Carpet Cleaning Calgary</h2>
-        <p style="margin-top:1rem">Premium carpet, upholstery, mattress and vehicle interior cleaning for Calgary homes and businesses. Professional results with carefully selected, family-friendly cleaning solutions.</p>
-      </div>
-      <div class="btns">
+  <div class="hero-split">
+    <div class="hero-copy">
+      <span class="tag">Premium Cleaning Services in Calgary</span>
+      <h1 class="cond">Exceptional <span class="outline">Cleaning.</span><span class="r">Remarkable Results.</span></h1>
+      <div class="hero-sub">Professional Carpet Cleaning Calgary</div>
+      <p class="hero-lead">Premium carpet, upholstery, mattress and vehicle interior cleaning for Calgary homes and businesses. Professional results with carefully selected, family-friendly cleaning solutions.</p>
+      <div class="hero-btns">
         <a href="/contact" class="btn btn-red">Get Your Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="/services" class="btn btn-line-w">Explore Our Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
+      <div class="hero-proof">
+        <div class="n">4.9</div>
+        <div><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg></div><small>Local Rating</small></div>
+        <div class="sep"></div>
+        <div class="pr">Professional &bull; Reliable &bull; Detail-Focused</div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="ph"><img src="images/hero-carpet-extraction.jpg" alt="Technician using a hot water extraction wand on a carpet in a bright Calgary condo"></div>
+      <div class="seam"></div>
+      <div class="inset chamfer"><img class="chamfer" src="images/stairs-carpet-cleaning.jpg" alt="Stair carpet being steam cleaned"><span>Residential &middot; Commercial</span></div>
     </div>
   </div>
   <div class="ticker" style="margin-top:0">
